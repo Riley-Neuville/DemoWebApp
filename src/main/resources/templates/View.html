@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title th:text = "${title}"></title>
+
+</head>
+<body>
+
+<a th:href = "@{/AddEvent}"> Add Event</a>
+<a th:href = "@{/AddUser}">Add User</a>
+<table th:each = "event : ${events}">
+    <tr th:text = "${event.id}"></tr>
+    <tr th:text = "${event.name}"></tr>
+    <tr th:text = "${event.description}"></tr>
+    <tr th:text = "${event.date}"></tr>
+    <tr th:text = "${event.time}"></tr>
+</table>
+</body>
+</html>
