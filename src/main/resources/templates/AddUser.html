@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <title>Add User</title>
 </head>
+
 <body>
 <h1>User Page</h1>
-<a th:href = @{/}>Home<a>
+<a th:href = @{/}>Home</a>
+    <a th:href = @{/AddEvent}>Add Event</a>
+
+<form th:object="${user}" method="post">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" th:field="${user.name}" />
+
+    <br/>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" th:field="${user.password}" />
+
+    <br/>
+
+            <input type="submit" value="Add User" />
+        </form>
 
 </body>
 </html>

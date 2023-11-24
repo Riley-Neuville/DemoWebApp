@@ -23,14 +23,4 @@ public class HomeController {
 
         return "View";
     }
-
-    @GetMapping("/AddUser")
-    public String displayAddUser(Model model){
-    return "AddUser";
-    }
-
-    @GetMapping("/AddEvent")
-    public String displayAddEvent(Model model){
-        return "AddEvent";
-    }
 }
