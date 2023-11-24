@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title th:text = "${title}"></title>
+    <link rel="stylesheet" href="//styles.css">
 
 </head>
 <body>
 
 <a th:href = "@{/AddEvent}"> Add Event</a>
+<br/>
 <a th:href = "@{/AddUser}">Add User</a>
+<br/>
+<table th:each = "user : ${users}">
+    <tr th:text = "${user.id}"></tr>
+    <td th:text = "${user.name}"></td>
+</table>
+
 <table th:each = "event : ${events}">
     <tr th:text = "${event.id}"></tr>
-    <tr th:text = "${event.name}"></tr>
-    <tr th:text = "${event.description}"></tr>
-    <tr th:text = "${event.date}"></tr>
-    <tr th:text = "${event.time}"></tr>
+    <td th:text = "${event.name}"></td>
+    <td th:text = "${event.description}"></td>
+    <td th:text = "${event.date}"></td>
+    <td th:text = "${event.time}"></td>
+    <td th:text = "${event.user}"></td>
 </table>
 </body>
 </html>

@@ -45,4 +45,13 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<Event> getJobs() {
+        return jobs;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
